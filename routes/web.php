@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/teams', 'TeamsController@index');
+Route::get('/results', 'ResultsController@index');
