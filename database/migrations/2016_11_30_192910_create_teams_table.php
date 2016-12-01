@@ -6,25 +6,17 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateTeamsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('teams', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
+            $table->integer('coach_id')->unsigned();
+            $table->foreign('couch_id')->references('id')->on('players');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('teams');

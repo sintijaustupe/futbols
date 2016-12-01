@@ -9,6 +9,8 @@
                 <div class="panel-body">
                     @foreach($teams as $team)
                         <h4>"{{ $team->name }}"</h4>
+                        <p>Coach:</p>
+                        <p>{{ $team->couch_id }}<p>
                         <p>Players:</p>
                         <ul>
                             
